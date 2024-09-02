@@ -27,15 +27,15 @@ const CreatePost: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow mb-4">
+    <form onSubmit={handleSubmit} className="bg-white p-4 rounded-lg  items-center justify-center shadow mb-4">
       <textarea
-        className="w-full p-2 border rounded"
+        className="w-full p-2 border text-gray-900 rounded-full"
         placeholder="What's on your mind?"
         value={message}
         onChange={e => setMessage(e.target.value)}
         required
       />
-      <button type="submit" className="mt-2 bg-blue-500 text-white p-2 rounded">
+      <button type="submit" className="mt-2 h-10 w-20 bg-blue-700 text-white p-2 rounded">
         Post
       </button>
     </form>
