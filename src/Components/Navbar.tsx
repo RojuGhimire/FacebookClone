@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
       {/* Left: Logo and Search Bar */}
       <div className="flex items-center space-x-4">
         <Link to="/">
-          <img src="/logo.jpg" alt="Facebook Logo" className="h-10 w-10" />
+          <img src="/logo.webp" alt="Facebook Logo" className="h-10 w-10" />
         </Link>
         <div className="hidden sm:flex items-center bg-gray-200 p-2 rounded-full">
           <FaSearch className="text-gray-600 h-5 w-5" />

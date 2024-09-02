@@ -22,33 +22,48 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md w-80">
-        <h2 className="text-2xl mb-4">Login</h2>
-        {error && <p className="text-red-500 text-sm">{error}</p>}
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full p-2 border rounded mb-2"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required
+    <div className="flex items-center justify-center h-screen bg-blue-50">
+      <div className="flex flex-col items-center w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+        <img
+          src="/logo.webp"
+          alt="Facebook Logo"
+          className="w-48 mb-6"
         />
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full p-2 border rounded mb-4"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">
-          Login
-        </button>
-        <p className="mt-2 text-sm">
-          Don't have an account? <Link to="/signup" className="text-blue-500">Sign Up</Link>
-        </p>
-      </form>
+        <h2 className="text-3xl font-semibold mb-4">Log in to Facebook</h2>
+        {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+        <form onSubmit={handleLogin} className="w-full">
+          <input
+            type="email"
+            placeholder="Email or Phone Number"
+            className="w-full p-3 border border-gray-300 rounded mb-3"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full p-3 border border-gray-300 rounded mb-4"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            required
+          />
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-600 transition duration-200"
+          >
+            Log In
+          </button>
+        </form>
+        <div className="flex justify-between w-full mt-4 text-sm text-blue-600">
+          <Link to="/signup" className="hover:underline">
+            Create New Account
+          </Link>
+          <Link to="/forgot-password" className="hover:underline">
+            Forgot Password?
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

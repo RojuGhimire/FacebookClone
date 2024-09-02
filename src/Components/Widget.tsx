@@ -3,16 +3,16 @@ import { FaUserFriends, FaBirthdayCake, FaBullhorn } from 'react-icons/fa';
 
 const Widgets: React.FC = () => {
   // Example contacts data
-  const contacts = ['John Doe', 'Jane Smith', 'Mike Johnson'];
+  const contacts = ['Roju Ghimire', 'Prabin Nakhe', 'Roshik Duwal'];
   
   // Example sponsored ads data
   const sponsored = [
-    { id: 1, name: 'Ad 1', url: 'https://example.com/ad1', imageUrl: '/ad1.png' },
-    { id: 2, name: 'Ad 2', url: 'https://example.com/ad2', imageUrl: '/ad2.png' }
+    { id: 1, name: 'Ad 1', url: 'https://example.com/ad1', imageUrl: '/2.JPG' },
+    { id: 2, name: 'Ad 2', url: 'https://example.com/ad2', imageUrl: '/2.JPG' }
   ];
   
   // Example birthdays data
-  const birthdays = ['Alice Wonderland', 'Bob Marley'];
+  const birthdays = ['Rose Zu', 'Bipina'];
 
   return (
     <div className="w-60 p-4 bg-white h-screen sticky top-16 space-y-4">
@@ -25,7 +25,7 @@ const Widgets: React.FC = () => {
         <ul className="space-y-2">
           {contacts.map(contact => (
             <li key={contact} className="flex items-center space-x-2">
-              <img src="/default-avatar.png" alt={contact} className="h-8 w-8 rounded-full" />
+              <img src="/2.JPG" alt={contact} className="h-8 w-8 rounded-full" />
               <span>{contact}</span>
             </li>
           ))}
