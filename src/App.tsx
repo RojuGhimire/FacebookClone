@@ -2,9 +2,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Home from './pages/Home';
+import Login from './Pages/Login'
+import Signup from './Pages/Signup'
+import Home from './Pages/Home'
 
 const PrivateRoute: React.FC<{ children: JSX.Element }> = ({ children }) => {
   const { currentUser } = useAuth();
